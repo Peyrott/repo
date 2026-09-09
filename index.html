@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vicente Peyrot — Dados, BI &amp; Automação</title>
+<meta name="description" content="Portfólio de Vicente Peyrot — Análise de Dados, SQL, Power BI e automação de processos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">vicente<span class="dot">.</span>peyrot</a>
+    <nav class="nav-links">
+      <a href="#projetos">projetos</a>
+      <a href="#stack">stack</a>
+      <a href="#experiencia">experiência</a>
+      <a href="#contato">contato</a>
+    </nav>
+    <a class="nav-cta" href="assets/CV_Vicente_Peyrot.pdf" target="_blank" rel="noopener">currículo</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text hero-animate-left">
+        <div class="hero-kicker">
+          <span class="status-indicator"></span>
+          <span>Análise de Dados &amp; Automação</span>
+        </div>
+        <h1 class="hero-headline">Transformo dados soltos e processos manuais em rotinas que rodam sozinhas.</h1>
+        <p class="hero-lede">
+          Sou o Vicente — trabalho na fronteira entre SQL, BI e automação em Python,
+          construindo desde dashboards que dão visibilidade a quem decide até robôs
+          que eliminam horas de trabalho repetitivo.
+        </p>
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-primary">ver projetos</a>
+          <a href="#contato" class="btn btn-ghost">falar comigo</a>
+        </div>
+      </div>
+
+      <div class="hero-panel hero-animate-right" role="img" aria-label="Console mostrando uma consulta SQL e seu resultado">
+        <div class="panel-bar">
+          <span class="panel-dot"></span><span class="panel-dot"></span><span class="panel-dot"></span>
+          <span class="panel-title">query.sql</span>
+          <span class="panel-status"><span class="pulse-dot"></span> executed in 14ms</span>
+        </div>
+        <div class="panel-scanline"></div>
+        <pre class="panel-code"><code><span class="tok-kw">SELECT</span>
+  processo,
+  horas_antes,
+  horas_depois,
+  <span class="tok-fn">ROUND</span>(<span class="tok-fn">100.0</span> * (horas_antes - horas_depois)
+        / horas_antes, 1) <span class="tok-kw">AS</span> reducao_pct
+<span class="tok-kw">FROM</span> rotinas_automatizadas
+<span class="tok-kw">ORDER BY</span> reducao_pct <span class="tok-kw">DESC</span>;</code></pre>
+        <div class="panel-result">
+          <div class="result-row result-head">
+            <span>processo</span><span>antes</span><span>depois</span><span>redução</span>
+          </div>
+          <div class="result-row">
+            <span>Importação Salesforce WFM</span><span>1 turno</span><span>0 min</span><span class="hl">100%</span>
+          </div>
+          <div class="result-row">
+            <span>Relatórios de cobrança</span><span>3h</span><span>30min</span><span class="hl">83%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="section reveal-on-scroll">
+    <div class="section-head">
+      <h2>Projetos</h2>
+      <p>Do dado bruto ao produto no ar — dashboards, automações e aplicações completas.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card project-card--wide reveal-on-scroll">
+        <div class="project-body">
+          <p class="project-tag">Automação · RPA</p>
+          <h3>Automação de relatórios WFM (Salesforce)</h3>
+          <p>
+            Robô em Python que faz login no Salesforce Lightning, resolve verificação
+            por e-mail, exporta relatórios de Workforce Management, padroniza os dados
+            e atualiza uma planilha Google Sheets automaticamente — rodando em loop a
+            cada 15 minutos quando necessário, com logs e screenshots para auditoria.
+          </p>
+          <ul class="project-points">
+            <li>Substitui uma rotina manual diária de login, exportação e consolidação</li>
+            <li>Fallbacks para lidar com pequenas mudanças de interface</li>
+            <li>Foco declarado em confiabilidade e rastreabilidade, não só velocidade</li>
+          </ul>
+          <div class="project-stack">
+            <span>Python</span><span>Selenium/Playwright</span><span>Google Sheets API</span>
+          </div>
+        </div>
+        <div class="project-metric">
+          <span class="metric-value">15<small>min</small></span>
+          <span class="metric-label">ciclo de execução automática</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal-on-scroll">
+        <p class="project-tag">BI · Power BI</p>
+        <h3>Dashboard de cobranças</h3>
+        <p>
+          Construído do zero na Sirtec: modelagem, ETL em Power Query e medidas em
+          DAX, dando à liderança a primeira visibilidade sobre o faturamento de
+          terceiros — antes sem controle nenhum — com KPIs de metas de cobrança.
+        </p>
+        <div class="project-stack">
+          <span>Power BI</span><span>DAX</span><span>Power Query</span><span>SQL</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal-on-scroll">
+        <p class="project-tag">Full-stack · SaaS</p>
+        <h3>FinControl</h3>
+        <p>
+          Aplicação financeira para MEIs, com autenticação JWT, Row Level Security
+          no banco e validação de dados com Zod — construída como uma base de
+          produção real, não um protótipo descartável.
+        </p>
+        <div class="project-stack">
+          <span>Node.js</span><span>Supabase/PostgreSQL</span><span>Zod</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal-on-scroll">
+        <p class="project-tag">Full-stack · Marketplace</p>
+        <h3>Peladas</h3>
+        <p>
+          Plataforma de aluguel de quadras esportivas: o dono cadastra horários
+          disponíveis e o usuário reserva e entra em contato direto. Responsável
+          pelo backend, com deploy real em produção (Vercel + Railway).
+        </p>
+        <div class="project-stack">
+          <span>React/Vite</span><span>Node.js/Express</span><span>Supabase + PostGIS</span><span>Mercado Pago</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal-on-scroll">
+        <p class="project-tag">Full-stack · Marketplace</p>
+        <h3>MonteBoy</h3>
+        <p>
+          Marketplace de fretes entre motoboys e estabelecimentos, com negociação
+          de propostas: qualquer lado pode aceitar, recusar ou contrapropor, com
+          mensagens diretas entre as partes. Desenvolvido integralmente por mim.
+        </p>
+        <div class="project-stack">
+          <span>JavaScript</span><span>Node.js</span><span>Python</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="section reveal-on-scroll">
+    <div class="section-head">
+      <h2>Stack</h2>
+      <p>As ferramentas que uso para tirar um dado do banco e transformar em decisão.</p>
+    </div>
+
+    <div class="schema">
+      <div class="schema-table reveal-on-scroll">
+        <div class="schema-title">dados_e_sql</div>
+        <div class="schema-row"><span>SQL Server</span><span class="schema-type">query</span></div>
+        <div class="schema-row"><span>MySQL</span><span class="schema-type">query</span></div>
+        <div class="schema-row"><span>Supabase / PostgreSQL</span><span class="schema-type">query</span></div>
+        <div class="schema-row"><span>Modelagem relacional</span><span class="schema-type">design</span></div>
+      </div>
+
+      <div class="schema-table reveal-on-scroll">
+        <div class="schema-title">bi_e_analise</div>
+        <div class="schema-row"><span>Power BI</span><span class="schema-type">dash</span></div>
+        <div class="schema-row"><span>DAX / Power Query</span><span class="schema-type">etl</span></div>
+        <div class="schema-row"><span>Metabase</span><span class="schema-type">dash</span></div>
+        <div class="schema-row"><span>EDA</span><span class="schema-type">analise</span></div>
+      </div>
+
+      <div class="schema-table reveal-on-scroll">
+        <div class="schema-title">automacao</div>
+        <div class="schema-row"><span>Python (pandas)</span><span class="schema-type">script</span></div>
+        <div class="schema-row"><span>Selenium / Playwright</span><span class="schema-type">rpa</span></div>
+        <div class="schema-row"><span>N8N</span><span class="schema-type">fluxo</span></div>
+        <div class="schema-row"><span>Excel/VBA</span><span class="schema-type">macro</span></div>
+      </div>
+
+      <div class="schema-table reveal-on-scroll">
+        <div class="schema-title">dev_e_infra</div>
+        <div class="schema-row"><span>Node.js / React</span><span class="schema-type">app</span></div>
+        <div class="schema-row"><span>Git / GitHub</span><span class="schema-type">vcs</span></div>
+        <div class="schema-row"><span>Docker</span><span class="schema-type">infra</span></div>
+        <div class="schema-row"><span>HTML / CSS</span><span class="schema-type">front</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section id="experiencia" class="section reveal-on-scroll">
+    <div class="section-head">
+      <h2>Experiência</h2>
+      <p>Onde apliquei isso tudo até agora.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal-on-scroll">
+        <div class="timeline-when">fev/2026 – ago/2026</div>
+        <div class="timeline-body">
+          <h3>Analista de Dados <span>· Sirtec Sistemas Elétricos</span></h3>
+          <p>
+            Automações em Python que substituíram rotinas manuais de importação e
+            correção de dados; dashboard de cobranças em Power BI construído do
+            zero; extração e validação de dados em bancos relacionais com SQL.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item reveal-on-scroll">
+        <div class="timeline-when">set/2024 – jan/2026</div>
+        <div class="timeline-body">
+          <h3>Analista de Suporte Técnico de Sistemas <span>· Sky Informática</span></h3>
+          <p>
+            Diagnostiquei um erro de tipo de coluna que gravava 100% das escrituras
+            de um cartório com código tributário incorreto; corrigi via SQL e
+            reportei a causa raiz à equipe de desenvolvimento.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item reveal-on-scroll">
+        <div class="timeline-when">ago/2024 – cursando</div>
+        <div class="timeline-body">
+          <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas <span>· UNISINOS</span></h3>
+          <p>Formação em andamento, com foco crescente em engenharia de dados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section section-contact reveal-on-scroll">
+    <div class="contact-box">
+      <h2>Vamos conversar</h2>
+      <p>Aberto a oportunidades em dados, BI e automação — ou só trocar uma ideia sobre algum desses projetos.</p>
+      <div class="contact-links">
+        <a href="mailto:vicentepeyrot@gmail.com">vicentepeyrot@gmail.com</a>
+        <a href="https://www.linkedin.com/in/vicente-peyrot-16bb78196" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Peyrott" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>Vicente Peyrot — São Leopoldo, RS</span>
+</footer>
+
+<script>
+  // Tech scroll reveal & typing cursor effect
+  document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer for scroll reveal with tech stagger
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>
