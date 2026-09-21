@@ -1,7 +1,5 @@
 # Portfólio — Vicente Peyrot
 
-Site estático (HTML + CSS puro, sem build) pronto para publicar no GitHub Pages.
-
 ## Estrutura
 
 ```
