@@ -12,12 +12,18 @@
 </head>
 <body>
 
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress-container" aria-hidden="true">
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+</div>
+
 <div class="grid-overlay" aria-hidden="true"></div>
 
 <header class="nav">
   <div class="nav-inner">
     <a href="#top" class="nav-brand">vicente<span class="dot">.</span>peyrot</a>
     <nav class="nav-links">
+      <a href="#como-trabalho">método</a>
       <a href="#projetos">projetos</a>
       <a href="#stack">stack</a>
       <a href="#experiencia">experiência</a>
@@ -33,15 +39,22 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-text hero-animate-left">
-        <div class="hero-kicker">
-          <span class="status-indicator"></span>
-          <span>Análise de Dados &amp; Automação</span>
+        <div class="hero-profile">
+          <div class="hero-avatar-wrapper">
+            <img src="assets/vicente.jpg" alt="Foto de Vicente Peyrot" class="hero-avatar">
+            <span class="hero-avatar-status" title="Disponível para projetos"></span>
+          </div>
+          <div class="hero-profile-info">
+            <span class="hero-greeting">Olá, seja bem-vindo(a)! 👋</span>
+            <div class="hero-kicker">
+              <span class="status-indicator"></span>
+              <span>Análise de Dados &amp; Automação</span>
+            </div>
+          </div>
         </div>
         <h1 class="hero-headline">Transformo dados soltos e processos manuais em rotinas que rodam sozinhas.</h1>
         <p class="hero-lede">
-          Sou o Vicente, trabalho na fronteira entre SQL, BI e automação em Python,
-          construindo desde dashboards que dão visibilidade a quem decide até robôs
-          que eliminam horas de trabalho repetitivo.
+          Sou o <strong>Vicente</strong>. Trabalho na interseção prática entre SQL, Business Intelligence e automação em Python. Meu foco é resolver gargalos reais: construo desde dashboards claros que dão visibilidade para tomadas de decisão até robôs e pipelines que eliminam horas de trabalho braçal e repetitivo.
         </p>
         <div class="hero-actions">
           <a href="#projetos" class="btn btn-primary">ver projetos</a>
@@ -76,6 +89,190 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SCROLLYTELLING: COMO EU TRABALHO -->
+  <section id="como-trabalho" class="section scrolly-section">
+    <div class="section-head reveal-on-scroll">
+      <div class="kicker-badge">pipeline de entrega</div>
+      <h2>Do caos inicial ao resultado automatizado</h2>
+      <p>Role para acompanhar como transformo problemas manuais em sistemas autônomos e dados em decisões.</p>
+    </div>
+
+    <div class="scrolly-container">
+      <!-- Lado esquerdo: Passos que o usuário rola -->
+      <div class="scrolly-steps">
+        
+        <div class="scrolly-step active" data-step="0">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <span class="step-badge">Fase 1: Diagnóstico</span>
+            <h3>Mapeamento da dor &amp; dados brutos</h3>
+            <p>
+              Identifico onde ocorrem os gargalos operacionais: rotinas manuais demoradas, inconsistência em cadastros, divergência de regras tributárias ou falta de visibilidade gerencial.
+            </p>
+            <div class="step-meta">
+              <span>SQL queries exploratórias</span>
+              <span>Análise de processos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly-step" data-step="1">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <span class="step-badge">Fase 2: Automação &amp; Engenharia</span>
+            <h3>Construção de pipelines &amp; RPA</h3>
+            <p>
+              Desenvolvo scripts em Python com Selenium/Playwright e integração com APIs. Trato os dados com pandas, crio rotinas de fallback e logs à prova de falhas para rodar sem intervenção humana.
+            </p>
+            <div class="step-meta">
+              <span>Python &amp; RPA</span>
+              <span>ETL Automatizado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly-step" data-step="2">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <span class="step-badge">Fase 3: Inteligência &amp; BI</span>
+            <h3>Modelagem analítica &amp; Dashboards</h3>
+            <p>
+              Estruturo modelos relacionais otimizados (Star Schema), cálculo métricas avançadas em DAX e crio relatórios interativos no Power BI / Metabase para acompanhamento direto da liderança.
+            </p>
+            <div class="step-meta">
+              <span>Power BI &amp; DAX</span>
+              <span>Modelagem Relacional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly-step" data-step="3">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <span class="step-badge">Fase 4: Impacto Real</span>
+            <h3>Zero retrabalho &amp; Decisão rápida</h3>
+            <p>
+              O ciclo se fecha com horas de trabalho economizadas por semana, processos 100% auditáveis e dados atualizados pontualmente para quem decide o rumo do negócio.
+            </p>
+            <div class="step-meta">
+              <span>+80% eficiência</span>
+              <span>Confiabilidade contínua</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lado direito: Visual fixo interativo (Sticky Graphic) -->
+      <div class="scrolly-graphic-wrapper">
+        <div class="scrolly-graphic">
+          
+          <!-- Slide 0: Diagnóstico -->
+          <div class="graphic-stage active" id="stage-0">
+            <div class="stage-window">
+              <div class="stage-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="stage-title">diagnostico_problema.sql</span>
+              </div>
+              <div class="stage-body">
+                <div class="stage-code">
+                  <code><span class="tok-kw">SELECT</span> filial, <span class="tok-fn">COUNT</span>(*) <span class="tok-kw">AS</span> inconsistencias<br>
+                  <span class="tok-kw">FROM</span> transacoes_brutas<br>
+                  <span class="tok-kw">WHERE</span> status = <span class="tok-str">'pendente_manual'</span><br>
+                  <span class="tok-kw">GROUP BY</span> filial;</code>
+                </div>
+                <div class="stage-metric-box danger">
+                  <span class="metric-icon">⚠️</span>
+                  <div>
+                    <strong>1 turno por dia</strong>
+                    <p>gasto em planilhas manuais e conciliações</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 1: Robô / Script -->
+          <div class="graphic-stage" id="stage-1">
+            <div class="stage-window">
+              <div class="stage-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="stage-title">automation_bot.py</span>
+                <span class="stage-tag running">● RUNNING</span>
+              </div>
+              <div class="stage-body">
+                <div class="stage-terminal">
+                  <div class="terminal-line">[18:00:00] Início da rotina agendada...</div>
+                  <div class="terminal-line success">✔ Login no Salesforce Lightning concluído</div>
+                  <div class="terminal-line success">✔ Exportação de dados WFM efetuada (1.842 registros)</div>
+                  <div class="terminal-line success">✔ Transformação e limpeza pandas concluída</div>
+                  <div class="terminal-line highlight">➔ Sincronizado com base de dados em 12.4s</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: BI / DAX -->
+          <div class="graphic-stage" id="stage-2">
+            <div class="stage-window">
+              <div class="stage-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="stage-title">dashboard_cobrancas.pbix</span>
+              </div>
+              <div class="stage-body">
+                <div class="mini-dashboard">
+                  <div class="mini-kpi-card">
+                    <span class="kpi-title">Recuperação</span>
+                    <span class="kpi-value">R$ 480k</span>
+                    <span class="kpi-trend positive">▲ +24% vs meta</span>
+                  </div>
+                  <div class="mini-kpi-card">
+                    <span class="kpi-title">Inadimplência</span>
+                    <span class="kpi-value">2.1%</span>
+                    <span class="kpi-trend positive">▼ -0.8%</span>
+                  </div>
+                </div>
+                <div class="mini-chart">
+                  <div class="chart-bar" style="height: 45%;"><span>Jan</span></div>
+                  <div class="chart-bar" style="height: 60%;"><span>Fev</span></div>
+                  <div class="chart-bar" style="height: 75%;"><span>Mar</span></div>
+                  <div class="chart-bar active" style="height: 95%;"><span>Abr</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Impacto / Eficiência -->
+          <div class="graphic-stage" id="stage-3">
+            <div class="stage-window stage-window--success">
+              <div class="stage-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="stage-title">relatorio_impacto.json</span>
+              </div>
+              <div class="stage-body impact-summary">
+                <div class="impact-grid">
+                  <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">Automação de relatórios diários</span>
+                  </div>
+                  <div class="impact-item">
+                    <span class="impact-number">83%</span>
+                    <span class="impact-label">Redução de tempo em cobrança</span>
+                  </div>
+                </div>
+                <div class="impact-status-bar">
+                  <span class="pulse-dot"></span> Rotinas rodando em background com 0 erros
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -271,9 +468,17 @@
 </footer>
 
 <script>
-  // Tech scroll reveal & typing cursor effect
   document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for scroll reveal with tech stagger
+    // 1. Scroll Progress Bar
+    const progressBar = document.getElementById('scrollProgressBar');
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (progressBar) progressBar.style.width = scrolled + '%';
+    }, { passive: true });
+
+    // 2. Intersection Observer para Reveal Animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -284,6 +489,35 @@
     }, { threshold: 0.15 });
 
     document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+    // 3. Scrollytelling: Observer dos Passos (Steps)
+    const steps = document.querySelectorAll('.scrolly-step');
+    const stages = document.querySelectorAll('.graphic-stage');
+
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const stepIndex = entry.target.dataset.step;
+          
+          // Marca o step ativo
+          steps.forEach(s => s.classList.remove('active'));
+          entry.target.classList.add('active');
+
+          // Altera o slide visual no sticky graphic
+          stages.forEach(stage => stage.classList.remove('active'));
+          const targetStage = document.getElementById(`stage-${stepIndex}`);
+          if (targetStage) {
+            targetStage.classList.add('active');
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '-30% 0px -40% 0px',
+      threshold: 0.2
+    });
+
+    steps.forEach(step => stepObserver.observe(step));
   });
 </script>
 
