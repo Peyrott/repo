@@ -603,6 +603,44 @@ main { position: relative; z-index: 1; }
   gap: 32px;
   align-items: center;
 }
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 10px;
+}
+.project-header .project-tag {
+  margin: 0;
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--accent);
+  background: rgba(79, 209, 197, 0.08);
+  border: 1px solid var(--accent-dim);
+  border-radius: 4px;
+  padding: 3px 9px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.project-link:hover {
+  background: rgba(79, 209, 197, 0.18);
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.project-title-link {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+.project-title-link:hover {
+  color: var(--accent);
+}
 .project-tag {
   font-family: var(--mono);
   font-size: 0.72rem;

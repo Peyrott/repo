@@ -280,10 +280,49 @@
   <section id="projetos" class="section reveal-on-scroll">
     <div class="section-head">
       <h2>Projetos</h2>
-      <p>Do dado bruto ao produto no ar: dashboards, automações e aplicações completas.</p>
+      <p>Do dado bruto ao produto no ar: machine learning, automações, dashboards e aplicações completas.</p>
     </div>
 
     <div class="project-grid">
+
+      <article class="project-card project-card--wide reveal-on-scroll">
+        <div class="project-body">
+          <div class="project-header">
+            <p class="project-tag">Machine Learning · MLOps</p>
+            <a href="https://github.com/Peyrott/XGBoost_Analise_churn" target="_blank" rel="noopener" class="project-link" aria-label="Ver repositório no GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <h3>
+            <a href="https://github.com/Peyrott/XGBoost_Analise_churn" target="_blank" rel="noopener" class="project-title-link">
+              Previsão de Churn com XGBoost &amp; MLOps
+            </a>
+          </h3>
+          <p>
+            Pipeline end-to-end de Machine Learning voltado a prever o cancelamento de clientes em telecomunicações, com foco estrito em impacto financeiro. Calibra o limiar de decisão (threshold) com base na matriz de custos do negócio (LTV vs. custo de retenção), gerando mais de R$ 100 mil em economia estimada no lote de teste.
+          </p>
+          <ul class="project-points">
+            <li>Detecção de 96,07% dos cancelamentos (Recall) com XGBoost otimizado para dados desbalanceados</li>
+            <li>Interpretabilidade com SHAP (TreeExplainer) mapeando fatores críticos de atrito (contratos mensais, fibra ótica)</li>
+            <li>Microsserviço de inferência conteinerizado com Docker, API REST em FastAPI, Pydantic V2 e testes em Pytest</li>
+          </ul>
+          <div class="project-stack">
+            <span>Python</span><span>XGBoost</span><span>scikit-learn</span><span>FastAPI</span><span>Docker</span><span>SHAP</span><span>Pydantic</span><span>Pytest</span>
+          </div>
+        </div>
+        <div class="project-metric">
+          <span class="metric-value">96<small>%</small></span>
+          <span class="metric-label">recall na detecção de churn</span>
+        </div>
+      </article>
 
       <article class="project-card project-card--wide reveal-on-scroll">
         <div class="project-body">
